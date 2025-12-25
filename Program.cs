@@ -2,54 +2,10 @@
 using System.CommandLine;
 using System.Reflection.Emit;
 
-//var bundleCommand = new Command("bundle", "Bundle code files to a singl file");
-//bundleCommand.SetHandler(() => {
-
-//    Console.WriteLine(" i am happy"); 
-
-//});
-//var rootCommand = new RootCommand("root command to cli project");
-//await rootCommand.InvokeAsync(args);
-
-//var language = new Option<string>("--language", "file what written in this language");
-//language.AddAlias("-l");
-
-//var output = new Option<string>("--output", "Routing for location of the file");
-//output.AddAlias("-o");
-
-//var note = new Option<bool>("--note" ,"to save in comment");
-//var sort = new Option<bool>("--sort" ,()=>false,"file sort");
-//sort.AddAlias("-s");
-
-//var removeEmptyLines = new Option<bool>("--remove-empty-lines", "remove_empty_lines");
-//removeEmptyLines.AddAlias("-rel");
-
-//var author = new Option<bool>("--author", "provide the name of the file's create");
-//author.AddAlias("-a");
-
-//rootCommand.AddCommand(bundleCommand);
-
-//bundleCommand.AddOption(language);
-//bundleCommand.AddOption(output);   
-//bundleCommand.AddOption(note);
-//bundleCommand.AddOption(sort);  
-//bundleCommand.AddOption(author);
-//bundleCommand.AddOption(removeEmptyLines);
-
-
-
-
-
-
-
-
-
-//הגדרת השורש 
 var rootCommand = new RootCommand("root file");
-//הגדרת הBUNDLE 
+ 
 var bundleCommad = new Command("bundle", "bundle file");
 
-//הגדרת הOPTIONS 
 var bundleOption = new Option<FileInfo>("--output", "file pathand and name");
 bundleOption.AddAlias("-o");//כינוי אליאס
 
@@ -200,9 +156,3 @@ creat_rsp.SetHandler(() =>
     }
 });
 rootCommand.InvokeAsync(args);
-
-
-             
-
-
-
